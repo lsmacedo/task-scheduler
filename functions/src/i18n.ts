@@ -1,12 +1,15 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 /* eslint-disable max-len */
 export const i18n = {
   'pt-br': {
     'available_actions': 'ações disponíveis são',
-    'change_lamp_color': 'valores disponíveis para change_lamp_color são',
-    'toggle_lamp': 'valores disponíveis para toggle_lamp são',
-    'toggle_tv': 'valores disponíveis para toggle_tv são',
-    'make_tweet': 'make_tweet requer um texto',
-    'add_to_calendar': 'add_to_calendar requer um título e a data do evento',
+    'actionDescriptions': {
+      'change_lamp_color': 'valores disponíveis para change_lamp_color são: white, red, green, blue, orange, purple',
+      'toggle_lamp': 'valores disponíveis para toggle_lamp são: on, off',
+      'toggle_tv': 'valores disponíveis para toggle_tv são: on, off',
+      'make_tweet': 'make_tweet requer um texto',
+      'add_to_calendar': 'add_to_calendar requer um título e a data do evento',
+    },
     'date_parameter': 'ações requerem um segundo parâmetro que é: uma data, caso seja especificada, ou senão a string "now"',
     'message': 'em caso de dúvida, responder o usuário com uma mensagem precedida por "message: "',
     'tasks': 'ações devem ser precedidas por "tasks: "',
@@ -18,4 +21,4 @@ export const i18n = {
       '- 2023-01-01 10:00 [user] preciso fazer uma ligação importante hoje às 19 horas, adicione isso ao calendário\n- 2023-01-01 10:00 [you] message: Ok, irei adicionar isso agora ao seu calendário tasks: add_to_calendar("fazer ligação importante", "2023-01-01 17:00", "now")',
     ],
   },
-} as { [language: string]: { [key: string]: string | string[] } };
+} as { [language: string]: any };

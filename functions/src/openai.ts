@@ -7,26 +7,6 @@ dotenv.config();
 import {i18n} from './i18n';
 
 const COMPLETION_API_URL = 'https://api.openai.com/v1/completions';
-const AVAILABLE_ACTIONS = [
-  {
-    name: 'change_lamp_color',
-    values: ['white', 'red', 'green', 'blue', 'orange', 'purple'],
-  },
-  {
-    name: 'toggle_lamp',
-    values: ['on', 'off'],
-  },
-  {
-    name: 'toggle_tv',
-    values: ['on', 'off'],
-  },
-  {
-    name: 'make_tweet',
-  },
-  {
-    name: 'add_to_calendar',
-  },
-];
 
 const config = {
   apiKey: process.env.API_KEY,
@@ -41,12 +21,11 @@ const getPrompt = (
     allNotes: string[]
 ) => [
   `${prompt.available_actions}: ${
-    AVAILABLE_ACTIONS.map((action) => action.name).join(', ')
+    Object.keys(prompt.actionDescriptions).map(
+        (action) => action).join(', ')
   }`,
-  ...AVAILABLE_ACTIONS.map(
-      (action) => action.values ?
-          `${prompt[action.name]}: ${action.values.join(', ')}` :
-          prompt[action.name],
+  ...Object.keys(prompt.actionDescriptions).map(
+      (action) => prompt.actionDescriptions[action],
   ),
   prompt.date_parameter,
   prompt.message,
