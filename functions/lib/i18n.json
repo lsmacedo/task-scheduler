@@ -1,0 +1,17 @@
+{
+    "pt-br": {
+        "current_time": "hora atual é",
+        "available_actions": "ações disponíveis são",
+        "change_lamp_color": "valores disponíveis para change_lamp_color são",
+        "toggle_lamp": "valores disponíveis para toggle_lamp são",
+        "toggle_tv": "valores disponíveis para toggle_tv são",
+        "make_tweet": "make_tweet requer um texto",
+        "date_parameter": "as ações requerem um segundo parâmetro que é: uma data, caso seja especificada, ou senão a string \"now\"",
+        "message": "se não tiver certeza do que fazer, responda o usuário com uma mensagem precedida por \"message: \"",
+        "intents": "ações devem ser precedidas por \"intents: \"",
+        "routines": "rotinas devem ser prefixadas por \"routines: \"",
+        "example_1": "[user] acenda a luz, ligue a tv e mude a cor da lâmpada para vermelho\n[you] message: Certo, eu irei acender a luz, ligar a tv e mudar a cor de sua lâmpada intents: toggle_lamp(\"on\", \"now\"); toggle_tv(\"on\", \"now\"); change_lamp_color(\"red\", \"now\")",
+        "example_2": "[user] faça um tweet dizendo oi às 22 horas\n[you] message: Tudo bem, irei fazer o tweet às 22 horas intents: make_tweet(\"oi\", \"2022-03-15 22:00\")",
+        "example_3": "[user] quando eu disser que irei assistir tv apague a luz\n[you] message: Combinado, sempre que você me disser que irá assistir TV eu irei ligar a tv e apagar a luz routines: quando usuário disser que irá assistir televisão, ligar a tv e apagar a luz"
+    }
+}
